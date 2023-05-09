@@ -1,0 +1,16 @@
+C:\Users\ngolben\source\repos\XSLMaker2\XSLMaker2\obj\Debug\XSLMaker2.csproj.AssemblyReference.cache
+C:\Users\ngolben\source\repos\XSLMaker2\XSLMaker2\obj\Debug\MainWindow.g.cs
+C:\Users\ngolben\source\repos\XSLMaker2\XSLMaker2\obj\Debug\App.g.cs
+C:\Users\ngolben\source\repos\XSLMaker2\XSLMaker2\obj\Debug\XSLMaker2_MarkupCompile.cache
+C:\Users\ngolben\source\repos\XSLMaker2\XSLMaker2\bin\Debug\XSLMaker2.exe.config
+C:\Users\ngolben\source\repos\XSLMaker2\XSLMaker2\bin\Debug\XSLMaker2.exe
+C:\Users\ngolben\source\repos\XSLMaker2\XSLMaker2\bin\Debug\XSLMaker2.pdb
+C:\Users\ngolben\source\repos\XSLMaker2\XSLMaker2\obj\Debug\MainWindow.baml
+C:\Users\ngolben\source\repos\XSLMaker2\XSLMaker2\obj\Debug\XSLMaker2.g.resources
+C:\Users\ngolben\source\repos\XSLMaker2\XSLMaker2\obj\Debug\XSLMaker2.Properties.Resources.resources
+C:\Users\ngolben\source\repos\XSLMaker2\XSLMaker2\obj\Debug\XSLMaker2.csproj.GenerateResource.cache
+C:\Users\ngolben\source\repos\XSLMaker2\XSLMaker2\obj\Debug\XSLMaker2.csproj.CoreCompileInputs.cache
+C:\Users\ngolben\source\repos\XSLMaker2\XSLMaker2\obj\Debug\XSLMaker2.exe
+C:\Users\ngolben\source\repos\XSLMaker2\XSLMaker2\obj\Debug\XSLMaker2.pdb
+C:\Users\ngolben\source\repos\XSLMaker2\XSLMaker2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ngolben\source\repos\XSLMaker2\XSLMaker2\obj\Debug\XSLMaker2_MarkupCompile.lref

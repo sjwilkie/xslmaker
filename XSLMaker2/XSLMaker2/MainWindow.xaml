@@ -1,0 +1,170 @@
+﻿<Window x:Name="XSLMaker2Window" x:Class="XSLMaker2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:xslmaker2="clr-namespace:XSLMaker2"
+        mc:Ignorable="d"
+        Title="XSL Maker 2" MinWidth="768" MinHeight="700" d:DesignHeight="657.838" ResizeMode="CanResizeWithGrip" Width="768" Height="700">
+    <Grid x:Name="Grid" RenderTransformOrigin="0.484,0.347">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="174*"/>
+        </Grid.RowDefinitions>
+        <Image Source="PCTY-2.png" Stretch="Fill"/>
+        <TabControl HorizontalAlignment="Stretch" Margin="10,10,10,10" VerticalAlignment="Stretch" Grid.Row="1" MinWidth="500">
+            <TabItem Header="Report Design" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="32*"/>
+                        <RowDefinition Height="325*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFFFAA64" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <Button Content="?" HorizontalAlignment="Right" Margin="5" VerticalAlignment="Top" Width="30" Background="#FFFF8D1C" Foreground="White" FontWeight="Bold" FontSize="14"/>
+                    <Button Content="Open RDL" HorizontalAlignment="Right" Margin="202,5,50,0" VerticalAlignment="Top" Width="Auto" Height="24" MinWidth="200" Click="Button_Click"/>
+                    <Label Content="RDL Output" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Height="auto" Width="auto" FontSize="30"/>
+                    <Grid Grid.Row="1">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="253*"/>
+                                <ColumnDefinition MinWidth="100" Width="213*"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <TreeView x:Name="RDLOutputTree" HorizontalAlignment="Stretch" Margin="5,5,5,5" VerticalAlignment="Stretch" MinHeight="200" MinWidth="200">
+                                <TreeView.ItemContainerStyle>
+                                    <Style TargetType="{x:Type TreeViewItem}">
+                                        <Setter Property="IsExpanded" Value="True"/>
+                                    </Style>
+                                </TreeView.ItemContainerStyle>
+                            </TreeView>
+                            
+                            
+                            
+                        </Grid>
+                    </Grid>
+
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="XSL Design" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="auto">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="32*"/>
+                        <RowDefinition Height="325*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFFFAA64" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <xslmaker2:XSLTree x:Name="XSLOutputTree" HorizontalAlignment="Stretch" Margin="5,5,5,5" VerticalAlignment="Stretch" MinHeight="200" MinWidth="200" Grid.Row="1">
+                        <TreeView.ItemContainerStyle>
+                            <Style TargetType="{x:Type TreeViewItem}">
+                                <Setter Property="IsExpanded" Value="True"/>
+                            </Style>
+                        </TreeView.ItemContainerStyle>
+                    </xslmaker2:XSLTree>
+                    <Label Content="XSL Design View" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Height="auto" Width="auto" FontSize="30"/>
+                    <Label Content="Element Options" HorizontalAlignment="right" Margin="0" VerticalAlignment="Top" Height="auto" Width="auto"  FontSize="30" Grid.Column="1"/>
+                    <Grid x:Name="ElementOptionsGrid" Grid.Column="1" HorizontalAlignment="Stretch" Height="auto" Margin="5,5,5,5" Grid.Row="1" VerticalAlignment="Stretch" Width="auto">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="ElementOptionRemove" Content="Remove" HorizontalAlignment="Stretch" Margin="5,5,5,5" VerticalAlignment="Stretch" Width="auto" Foreground="#FFF0A4A4" Visibility="Hidden">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFFF8C8C" Offset="0"/>
+                                    <GradientStop Color="#FF630415" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                        <Button x:Name="ElementOptionMoveUp" Content="Move Up" HorizontalAlignment="Stretch" Margin="5,5,5,5" VerticalAlignment="Stretch" Width="auto" Foreground="Black" Grid.Row="1" Visibility="Hidden"/>
+                        <Button x:Name="ElementOptionMoveDown" Content="Move Down" HorizontalAlignment="Stretch" Margin="5,5,5,5" VerticalAlignment="Stretch" Width="auto" Foreground="Black" Grid.Row="2" Visibility="Hidden"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="XSL Text QuickView" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="32*"/>
+                        <RowDefinition Height="325*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFFFAA64" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="?" HorizontalAlignment="Right" Margin="5" VerticalAlignment="Top" Width="30" Background="#FFFF8D1C" Foreground="White" FontWeight="Bold" FontSize="14" Grid.Column="2"/>
+                        <Button Content="Generate XSL" HorizontalAlignment="Stretch" Margin="10,0" VerticalAlignment="Bottom" Height="38" Width="Auto" FontWeight="Bold" Foreground="White">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFF75F1F" Offset="1"/>
+                                    <GradientStop Color="#FFFF8D1D"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                        <Button Content="Open XSL" HorizontalAlignment="Stretch" Margin="10,0" VerticalAlignment="Bottom" Height="38" Width="Auto" FontWeight="Bold" Grid.Column="1" Foreground="White">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFF75F1F" Offset="1"/>
+                                    <GradientStop Color="#FFFF8D1D"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </Grid>
+                    <TextBox HorizontalAlignment="right" Margin="5,5,75,5" VerticalAlignment="Center" Width="20" Text=","/>
+                    <Label Content="Delimit By" HorizontalAlignment="right" Margin="5,5,100,5" VerticalAlignment="Center"/>
+                    <Grid Grid.Row="1">
+
+                    </Grid>
+                    <TextBox HorizontalAlignment="Stretch" Height="auto" Margin="5,5,5,5" Grid.Row="1" TextWrapping="Wrap" Text="Output" VerticalAlignment="Stretch" Width="auto"/>
+
+
+                </Grid>
+
+            </TabItem>
+
+        </TabControl>
+        <Menu HorizontalAlignment="Stretch" Height="24" Margin="0,0,0,0" VerticalAlignment="Top" Width="Auto" OpacityMask="#7F000000">
+            <MenuItem Header="File">
+                <MenuItem Header="Open"/>
+                <MenuItem Header="Save"/>
+            </MenuItem>
+            <MenuItem Header="Preferences">
+                <MenuItem Header="Open Preferences"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
