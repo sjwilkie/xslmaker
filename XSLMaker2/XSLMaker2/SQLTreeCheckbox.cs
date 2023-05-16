@@ -85,15 +85,6 @@ namespace XSLMaker2
             else if (cb.IsChecked == true & selectedTVI == tree.SelectedItem)
             {
                 recursiveCheckboxToggle(selectedTVI, false);
-                //if(tree.CheckboxSelectedItems.Count > 0)
-                //{
-                //    Console.WriteLine("These Items Remain:");
-                //    foreach(TreeViewItem item in tree.CheckboxSelectedItems)
-                //    {
-                //        string name = ((TextBlock)((DockPanel)item.Header).Children[1]).Text;
-                //        Console.WriteLine(name);
-                //    }
-                //}
                 
             }
 

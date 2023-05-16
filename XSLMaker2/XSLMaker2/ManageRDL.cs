@@ -24,9 +24,9 @@ namespace XSLMaker2
         TreeView RDLOutputTree;
         XSLTree XSLOutputTree;
         SQLTreeCheckbox TreeItemCheck;
-        XmlDataDocument RDLData;
+        XmlDocument RDLData;
 
-        public ManageRDL(TreeView rDLOutputTree, XSLTree xSLOutputTree, XmlDataDocument rDLData, SQLTreeCheckbox treeItemCheck)
+        public ManageRDL(TreeView rDLOutputTree, XSLTree xSLOutputTree, XmlDocument rDLData, SQLTreeCheckbox treeItemCheck)
         {
             RDLOutputTree = rDLOutputTree;
             XSLOutputTree = xSLOutputTree;

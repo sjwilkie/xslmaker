@@ -24,8 +24,7 @@ namespace XSLMaker2
     /// </summary>
     public partial class MainWindow : Window
     {
-        XmlDataDocument xmlDoc = new XmlDataDocument();
-        DataSet data = new DataSet();
+        XmlDocument xmlDoc = new XmlDocument();
         ManageRDL RDLData;
         XSLTreeCreator XSLData;
         SQLTreeCheckbox treeItemCheckbox;
@@ -47,11 +46,9 @@ namespace XSLMaker2
             {
                 if (openFile.FileName.Length > 0)
                 {
-                    xmlDoc = new XmlDataDocument();
-                    data = xmlDoc.DataSet;
+                    xmlDoc = new XmlDocument();
                     RDLOutputTree.Items.Clear();
                     XSLOutputTree.Items.Clear();
-                    // Add code here to create the schema of the DataSet to view the data.  
 
                     xmlDoc.Load(openFile.FileName);
 
